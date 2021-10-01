@@ -9,9 +9,9 @@ public class AttackedCard : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         /*攻击*/
-        // 选择attacker卡牌
+        // 选择attacker卡牌(鼠标拖拽的卡牌)
         CardController attacker = eventData.pointerDrag.GetComponent<CardController>();
-        // 选择defender卡牌(从player战区选择)
+        // 选择defender卡牌(本身)
         CardController defender = GetComponent<CardController>();
 
         if (attacker == null || defender == null)
